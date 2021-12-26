@@ -10,7 +10,11 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "echarts": "^5.2.0",
-    "vue": "^2.6.11"
+    "express": "^3.4.8",
+    "socket.io": "^4.2.0",
+    "vue": "^2.6.11",
+    "vue-json-excel": "^0.3.0",
+    "vue-socket.io": "^3.0.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
