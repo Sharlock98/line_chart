@@ -27,9 +27,6 @@
 </template>
 
 <script>
-
-import * as echarts from 'echarts';
-
 export default {
   name: 'HelloWorld',
   props: {
@@ -60,7 +57,15 @@ export default {
   },
   watch: {
     data1() {
-      this.creatChart();
+      localStorage.setItem('data1',this.data1)
+      // console.log(localStorage.getItem('data1'))
+      // this.creatChart();
+    },
+    data2(){
+      localStorage.setItem('data2',this.data2)
+    },
+    data3(){
+      localStorage.setItem('data3',this.data3)
     }
   },
   methods: {
@@ -130,16 +135,16 @@ export default {
     while (this.i < this.maxShow) {
       this.num.push(this.i += 50);
     }
-    this.creatChart();
+    // this.creatChart();
 
     //随机生成数据（可作为效果展示）
     const that = this;
     setInterval(function () {
       if (that.data1.length < that.maxShow / 50) {
-        that.addData(false, Math.random() * 1000);
+        that.addData(false, Math.random() * 1000,Math.random() * 1000,Math.random() * 1000);
       } else {
         that.flag = true;
-        that.addData(true, Math.random() * 1000);
+        that.addData(true, Math.random() * 1000,Math.random() * 1000,Math.random() * 1000);
       }
     }, 50);
   },
